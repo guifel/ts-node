@@ -360,7 +360,7 @@ function startRepl (service: Register, state: EvalState, code?: string) {
   }
 
   const repl = start({
-    prompt: '> ',
+    prompt: '🗿 > ',
     input: process.stdin,
     output: process.stdout,
     // Mimicking node's REPL implementation: https://github.com/nodejs/node/blob/168b22ba073ee1cbf8d0bcb4ded7ff3099335d04/lib/internal/repl.js#L28-L30
@@ -408,6 +408,16 @@ function startRepl (service: Register, state: EvalState, code?: string) {
 
     // Hard fix for TypeScript forcing `Object.defineProperty(exports, ...)`.
     exec('exports = module.exports', state.path)
+    process.stdin.push(".load ./../src/env.ts\n")
+    process.stdout.write('\u001B[2J\u001B[0;0f');
+    process.stdin.push("\n")
+    process.stdout.write('Welcome to geb-console!\n\n');
+    process.stdout.write('Context objects:\n');
+    process.stdout.write('- geb                   - ethers\n');
+    process.stdout.write('- gebAdmin              - wallet\n');
+    process.stdout.write('- contracts             - provider\n');
+    process.stdout.write('- BigNumber             - wait(promise)\n');
+    process.stdout.write('- ETH_A                 - WAD\n');
   }
 
   reset()
