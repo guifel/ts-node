@@ -35,6 +35,7 @@
     "register/",
     "esm/",
     "esm.mjs",
+    "env",
     "LICENSE",
     "tsconfig.schema.json",
     "tsconfig.schemastore-schema.json"
