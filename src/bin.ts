@@ -408,7 +408,7 @@ function startRepl (service: Register, state: EvalState, code?: string) {
 
     // Hard fix for TypeScript forcing `Object.defineProperty(exports, ...)`.
     exec('exports = module.exports', state.path)
-    process.stdin.push(".load env.ts\n")
+    process.stdin.push(".load env\n")
     process.stdout.write('\u001B[2J\u001B[0;0f');
     process.stdin.push("\n")
     process.stdout.write('Welcome to geb-console!\n\n');
