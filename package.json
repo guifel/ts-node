@@ -117,5 +117,9 @@
     "make-error": "^1.1.1",
     "source-map-support": "^0.5.17",
     "yn": "3.1.1"
+    "@reflexer-finance/geb-admin": "^0.0.11",
+    "@types/node": "^14.11.2",
+    "deasync2": "^1.0.1",
+    "ethers": "^5.0.14",
   }
 }
